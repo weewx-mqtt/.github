@@ -1,12 +1,24 @@
-## Hi there 👋
+# WeeWX-MQTT
 
-<!--
+This organization is for a collection of repositories that bring MQTT functionality to WeeWX.
 
-**Here are some ideas to get you started:**
+## [Subscribing](https://github.com/bellrichm/WeeWX-MQTTSubscribe)
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+This repository provides WeeWX with the ability to subscribe to MQTT topics and the data to the WeeWX processing pipeline. It can be run as either a WeeWX driver or a WeeWX service.
+MQTT messages with json, keyword/values, or individual values can be processed.
+
+When running as a driver, WeeWX loop packets are created passed to WeeWX.
+WeeWX processing then takes these, creates archive records, runs other services, and generates reports.
+
+When running as a service, either loop packets or archive records can be augmented with the data from MQTT.
+
+Note: This repository is not currently a part of this organization. It can be found [at this repository](https://github.com/bellrichm/WeeWX-MQTTSubscribe). The goal is to have it moved in 2026.
+
+## [Publishing](https://github.com/weewx-mqtt/publish)
+
+This repository provides WeeWX with the ability to publish WeeWX data to MQTT.
+MQTT messages content can be either json, keyword/values, or individual values.
+Data can be published to multiple topics, each with its own format.
+Each topic can be configured to publish on a new loop packet, new archive record, or both.
+
+## [Replication](https://github.com/weewx-mqtt/replicate)
