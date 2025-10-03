@@ -21,4 +21,8 @@ MQTT messages content can be either json, keyword/values, or individual values.
 Data can be published to multiple topics, each with its own format.
 Each topic can be configured to publish on a new loop packet, new archive record, or both.
 
-## [Replication](https://github.com/weewx-mqtt/replicate)
+## [Replicating](https://github.com/weewx-mqtt/replicate)
+
+This repository provides a "lightweight" database replication using MQTT V5 request/response capability.
+
+This is very much experimental, and I am not sure there is such a thing as "lightweight replication".
